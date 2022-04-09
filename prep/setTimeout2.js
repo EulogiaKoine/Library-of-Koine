@@ -32,7 +32,7 @@ const Waiting_func = function(){
             f = WQ.take();
 
             if(f.end <= now()){
-                SQ.put(f.fn);
+                SQ.put(f);
 
                 if(f.repeat){
                     f.end += f.long;
