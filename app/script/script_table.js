@@ -19,10 +19,13 @@ function float(schema, dir, result, prefix){
                     discordings.push(prefix + key);
                 }
             } else {
-                result[prefix + key] = {
+                const script = {
+                    id: prefix + key,
                     def: i,
                     text: dir.read(key)
                 };
+
+                result[script.id] = script;
             }
         } else {
             discordings.push(prefix + key);

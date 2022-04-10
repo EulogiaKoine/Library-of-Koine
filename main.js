@@ -42,6 +42,8 @@ const DB = new Directory(Path.get('db'));
 
 
 //---------- Application Layer --------
+const Page = Path.require('app/script/Page');
+const script_table = Page.script_table;
 //---------- Application Layer --------
 
 
