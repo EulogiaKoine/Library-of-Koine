@@ -68,6 +68,8 @@ function File(path, type, createIfNotExists){
     }
 }
 
+File.prototype.isDirectory = false;
+
 File.prototype.getPath = function(){
     return Paths.get(this.path);
 };

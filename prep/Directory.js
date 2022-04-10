@@ -73,6 +73,8 @@ function Directory(path, createIfNotExists){
     }
 };
 
+Directory.prototype.isDirectory = true;
+
 Directory.prototype.getPath = function(){
     return this.path;
 };
