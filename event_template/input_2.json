@@ -1,0 +1,15 @@
+{
+    "inputTypeId": 2,
+    "generateChoiceId": [1],
+    "choices": [
+        {
+            "text": "사용자 관점의 행동, 혹은 생각",
+            "request": {
+                "요구 속성": "요구 정보{}"
+            },
+            "result": {
+                "": "값"
+            }
+        }
+    ]
+}

@@ -53,19 +53,22 @@ const script_table = Page.script_table;
 
 //---------- dummy ----------
 const nanoTime = System.nanoTime, max = Math.max;
-var start, result;
 function response(room, msg, sender, isGroupChat, replier, imageDB){
     if(isGroupChat && room.indexOf('★') === -1) return;
     if(msg.startsWith('e') && config.admin.hash.indexOf(imageDB.getProfileHash()) !== -1){
         const rp = replier.reply.bind(replier);
         msg = msg.slice(1).trim();
+        let result;
         try {
-            start = nanoTime();
-            result = eval(msg);
-            rp("\u23f1\u02da " + max((nanoTime() - start - 230000) / 1000000000, 0) + " sec.\n" + result);
+            result = eval(
+                "var start = nanoTime();\n"
+                + msg
+                );
+            start = (nanoTime() - start) / 1000000000;
+            rp("⏱˚ " + start + " sec.\n" + result);
         }
         catch (e) {
-            rp("\u2622 " + e.name + " \xb7\xb7\xb7 " + e.lineNumber + "\n " + e.message);
+            rp("☢ " + e.name + " \xb7\xb7\xb7 " + e.lineNumber + "\n " + e.message);
         }
         return;
     }

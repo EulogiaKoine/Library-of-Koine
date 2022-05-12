@@ -1,0 +1,13 @@
+{
+    "type": 2,
+    "branches": [
+        {
+            "requestId": "조건 검사 함수 ID",
+            "request": {
+                "필요 속성": "필요 값"
+            },
+            "path": "경로"
+        }
+    ],
+    "defaultEventPath": "경로"
+}

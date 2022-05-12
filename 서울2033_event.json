@@ -1,0 +1,49 @@
+{
+    "processes": [
+        {
+            "processId": 0,
+            "text": "당신이 목적지를 향해 걷고 있는데, 하늘이 점점 어두워지더니 차...",
+            "choices": [
+                {
+                    "text": "우산을 펼친다.",
+                    "require": [
+                        "우산"
+                    ],
+                    "resultSelect": {
+                        "normal": {
+                            "resultId": 0
+                        },
+                        "probs": [
+                            {
+                                "prob": 10,
+                                "resultId": 1
+                            }
+                        ]
+                    },
+                    "results": [
+                        {
+                            "store": null,
+                            "changeStatus": null,
+                            "nextProcessId": 1,
+                            "isEventFinish": false,
+                            "addEvent": null
+                        },
+                        {
+                            "store": null,
+                            "changeStatus": null,
+                            "nextProcessId": 5,
+                            "isEventFinish": false,
+                            "addEvent": null
+                        }
+                    ]
+                },
+                {
+                    "text": "옷을 뒤집어쓴다.",
+                    "required": [
+                        "롱패딩"
+                    ]
+                } 
+            ]
+        }
+    ]
+}
